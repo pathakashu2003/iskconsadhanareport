@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_home"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_fillSadhana"
+            android:icon="@android:drawable/ic_menu_edit"
+            android:title="Fill Sadhana" />
+        <item
+            android:id="@+id/nav_fillSadhanaQuick"
+            android:icon="@android:drawable/ic_menu_add"
+            android:title="Fill Sadhana Quick Format" />
+        <item
+            android:id="@+id/nav_history"
+            android:icon="@android:drawable/ic_menu_agenda"
+            android:title="Your Sadhana History" />
+        <item
+            android:id="@+id/nav_devotees"
+            android:icon="@drawable/devotees"
+            android:title="Friends' Sadhana" />
+        <item
+            android:id="@+id/nav_inbox"
+            android:icon="@android:drawable/ic_dialog_email"
+            android:title="Messages" />
+    </group>
+
+    <item android:title="Others">
+        <menu>
+            <item
+                android:id="@+id/nav_profile"
+                android:icon="@android:drawable/ic_menu_myplaces"
+                android:title="Edit Profile" />
+            <item
+                android:id="@+id/nav_export"
+                android:icon="@android:drawable/stat_sys_download"
+                android:title="Local Backup" />
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@android:drawable/ic_dialog_info"
+                android:title="About App" />
+        </menu>
+    </item>
+
+</menu>

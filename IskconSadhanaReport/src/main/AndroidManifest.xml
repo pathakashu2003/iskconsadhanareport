@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.technicalround.iskconsadhanareport"
+    android:versionCode="33"
+    android:versionName="3.3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ActivityLogin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityAddDevotee"
+            android:label="Your Profile"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technicalround.iskconsadhanareport.ActivityLogin" />
+        </activity>
+        <activity
+            android:name=".ActivityMainDevotee"
+            android:label="@string/title_activity_main_devotee"
+            android:parentActivityName=".ActivityLogin"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technicalround.iskconsadhanareport.ActivityLogin" />
+        </activity>
+        <activity
+            android:name=".ActivityFriendsSadhana"
+            android:label="@string/title_activity_activity_friends_sadhana"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technicalround.iskconsadhanareport.ActivityMainDevotee" />
+        </activity>
+        <activity
+            android:name=".ActivitySettings"
+            android:label="@string/title_activity_activity_settings"
+            android:parentActivityName=".ActivityMainDevotee">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technicalround.iskconsadhanareport.ActivityMainDevotee" />
+        </activity>
+        <activity
+            android:name=".ActivityAboutUs"
+            android:label="@string/title_activity_activity_about_us"
+            android:parentActivityName=".ActivityMainDevotee"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.technicalround.iskconsadhanareport.ActivityMainDevotee" />
+        </activity>
+
+        <receiver
+            android:name=".ReceiverReminderNight"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".ReceiverReboot"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name=".ReceiverAlarmFrequent"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".ActivityProfilePic"></activity>
+    </application>
+
+</manifest>

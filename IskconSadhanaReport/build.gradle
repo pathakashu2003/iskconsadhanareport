@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+android {
+    compileSdkVersion 26
+    buildToolsVersion '28.0.3'
+    defaultConfig {
+        applicationId "com.technicalround.iskconsadhanareport"
+        minSdkVersion 19
+        targetSdkVersion 26
+        versionName '3.3'
+        versionCode 33
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            applicationIdSuffix 'debug'
+        }
+    }
+    productFlavors {
+    }
+}
+dependencies {
+    //compile fileTree(include: ['*.jar'], dir: 'libs')
+    //testCompile 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:26.0.0'
+    implementation 'com.android.support:design:26.0.0'
+    implementation 'com.android.support:support-v4:26.0.0'
+    //compile 'com.github.hotchemi:android-rate:1.0.1'
+    //compile 'com.splunk:mint-android-sdk:5.2.2'
+    implementation 'org.apache.commons:commons-csv:1.3'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation 'com.github.rampo.updatechecker:library:2.1.8'
+    debugImplementation 'com.amitshekhar.android:debug-db:1.0.0'
+    //compile files('libs/universal-image-loader-1.9.5.jar')
+    implementation files('src/main/mint-5.2.1.jar')
+}

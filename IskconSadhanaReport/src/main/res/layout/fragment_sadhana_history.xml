@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="3dp"
+    android:paddingLeft="0dp"
+    android:paddingTop="0dp"
+    tools:context="com.technicalround.iskconsadhanareport.ActivityMainDevotee">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHistorySadhana"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayoutComments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--
+                            <Spinner
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/spinner"
+                                android:layout_column="1"
+                                android:entries="@array/string_LIST_SHOW_WEEKS"
+                                android:visibility="invisible" />
+            -->
+            <EditText
+                android:id="@+id/editTextComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/buttonGiveComments"
+                android:layout_toStartOf="@+id/buttonGiveComments"
+                android:hint="Write comments. (Max 128 Characters)"
+                android:maxLength="128"
+                android:textSize="14dp" />
+
+            <!-- <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SEND"
+                android:id="@+id/buttonGiveComments"
+                android:background="@drawable/my_button"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" /> -->
+            <Button
+                android:id="@+id/buttonGiveComments"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/my_button"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="SEND"
+                android:textColor="#FFFFFF" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <TableLayout
+            android:id="@+id/tableHistoryHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+        </TableLayout>
+        <!-- <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <TableLayout
+                android:id="@+id/tableHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            </TableLayout>
+        </ScrollView>
+        <!-- </HorizontalScrollView> -->
+    </LinearLayout>
+</RelativeLayout>
+
+    <!-- <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.technicalround.iskconsadhanareport.FragmentSadhanaHistory">
+
+    </FrameLayout> -->

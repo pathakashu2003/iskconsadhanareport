@@ -1,0 +1,538 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:outlineProvider="bounds"
+    tools:context="com.technicalround.iskconsadhanareport.FragmentFillSadhana">
+
+    <Button
+        android:id="@+id/buttonPrevDate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:text="&lt;&lt;" />
+
+    <TextView
+        android:id="@+id/textViewFillDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonPrevDate"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/buttonPrevDate"
+        android:paddingTop="14dp"
+        android:text="dd-mm-yyyy"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/buttonNextDate"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/textViewFillDate"
+        android:background="@android:color/transparent"
+        android:text=">>" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonPrevDate"
+        android:background="@android:color/black" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/buttonPrevDate"
+        android:fillViewport="true">
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textViewFillDate"
+            android:outlineProvider="bounds"
+            android:useDefaultMargins="false">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_marginBottom="0dp"
+                android:layout_row="0"
+                android:text="Fields reported to Spiritual Guide"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:id="@+id/textView21"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="0"
+                android:text="Marks"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textStyle="bold|italic"
+                android:textAlignment="textStart"
+                android:layout_marginLeft="10dp" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="1"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:paddingRight="15dp"
+                android:text="Sleep (Last Night)"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewTimeSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="1"
+                android:paddingTop="10dp"
+                android:text="Enter Time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksSleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="1"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Wake Up"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewTimeWakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="2"
+                android:paddingTop="10dp"
+                android:text="Enter Time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksWakeup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="2"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="3"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Chant Complete"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textViewTimeChanting"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="3"
+                android:paddingTop="10dp"
+                android:text="Enter Time"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16dp" />
+
+
+            <TextView
+                android:id="@+id/textViewMarksChant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="3"
+                android:text="NOT USED"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="5"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Chant Count"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextChantRounds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="5"
+                android:hint="Total rounds"
+                android:inputType="number"
+                android:paddingRight="15dp"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="6"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Chant Quality"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <Spinner
+                android:id="@+id/spinnerChantQuality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_columnSpan="2"
+                android:layout_row="6"
+                android:entries="@array/string_CHANT_QUALITY"
+                android:paddingTop="10dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksChantQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="4"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="7"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Mangal Arti"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <CheckBox
+                android:id="@+id/checkBoxMangal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="7"
+                android:checked="false"
+                android:paddingTop="15dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/textViewMarksMangal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="7"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="8"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:singleLine="false"
+                android:text="Hear &amp; Think"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeHearing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="8"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksHear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="8"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="9"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Read &amp; Think"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeReading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="9"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksRead"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="9"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="10"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Service (Org.)"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="10"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="10"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="11"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Time Waste"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="4"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Chant Morning"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeDayRest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="11"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:id="@+id/textViewMarksDayRest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_row="11"
+                android:text="-"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextChantMorning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_marginRight="10dp"
+                android:layout_row="4"
+                android:hint="Rounds till 10AM"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_column="0"
+                android:layout_columnSpan="4"
+                android:layout_row="12"
+                android:background="@android:color/darker_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="3"
+                android:layout_marginBottom="0dp"
+                android:layout_marginTop="6dp"
+                android:layout_row="13"
+                android:text="Fields saved only on Phone"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/colorPrimaryDark" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="14"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Hear(Second)"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeHearing2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="14"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_columnSpan="2"
+                android:layout_row="15"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Shloka Remember"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeShloka"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="15"
+                android:hint="Minutes"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_row="16"
+                android:minHeight="@dimen/fill_sadhana_row_min_height"
+                android:text="Office Time"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            <EditText
+                android:id="@+id/editTextTimeOffice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_row="16"
+                android:hint="Hours"
+                android:inputType="number"
+                android:paddingTop="10dp"
+                android:textSize="13dp" />
+
+        </GridLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonSubmit"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/my_button"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:text="SAVE"
+        android:textColor="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/textViewScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/buttonSubmit"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="28dp"
+        android:layout_toLeftOf="@+id/buttonSubmit"
+        android:paddingTop="14dp"
+        android:text="Score: 0%"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="@color/colorPrimary" />
+
+    <ProgressBar
+        android:id="@+id/httpProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:indeterminate="false" />
+</RelativeLayout>
